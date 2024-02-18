@@ -52,7 +52,7 @@ include("Include.jl")
         @test length(d) == number_of_production_records;
 
         # check the type of the records -
-        @test typeof(d) == Dict{Int64,MyPuzzleRecordModel}
+        @test typeof(d) == Dict{Int64,MyPuzzleRecordModel};
 
         # decode the records -
         (total, codes) = decode_part_1(d);

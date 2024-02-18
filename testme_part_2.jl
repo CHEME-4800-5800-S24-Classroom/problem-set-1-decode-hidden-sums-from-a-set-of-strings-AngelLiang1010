@@ -47,8 +47,8 @@ include("Include.jl")
 
         # decode the records -
         (total, codes) = decode_part_2(d);
-
         # the total for production.txt should be 54925
         @test total == 54925;
+
     end
 end

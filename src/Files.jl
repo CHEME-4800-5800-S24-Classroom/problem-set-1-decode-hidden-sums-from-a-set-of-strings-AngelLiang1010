@@ -3,7 +3,10 @@
 """
     puzzleparse(filename::String) -> Dict{Int64, MyPuzzleRecordModel}
 
-TODO: Add documentation
+This method reads text lines from a file and put each line into a dictionary. The key is the index in order.
+
+Arguments:
+filename::String - the file that is read. There are text lines in the file. 
 """
 function puzzleparse(filename::String)::Dict{Int64, MyPuzzleRecordModel}
     
@@ -14,8 +17,8 @@ function puzzleparse(filename::String)::Dict{Int64, MyPuzzleRecordModel}
     # main -
     open(filename, "r") do io
         for line ∈ eachline(io)
-            
-            # TODO: do something with this line of text
+            records[linecounter]= build(line)
+            linecounter += 1
 
         end
     end
